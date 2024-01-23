@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Adicione o link para o Owl Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css" />
     <!-- Adicione o link para o jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Adicione o link para o Owl Carousel JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="tailwind.css">
     <script src="tailwind.config.js"></script>
-    
+
     <!-- CSS do Video Play -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Link Fonte Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para a biblioteca Waypoints - Contador -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
     <title>Meu Site</title>
 </head>
-<body  style="background-color: #fa912e;" >
+
+<body style="background-color: #fa912e;" class="font-sans">
 
     <!-- Navbar -->
     <nav class="bg-seagull-400 p-4">
@@ -33,10 +40,8 @@
             <!-- Ícone do menu para dispositivos móveis -->
             <div class="lg:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
@@ -50,42 +55,59 @@
     </nav>
 
     <!-- Conteúdo principal -->
-    <div class="container mx-auto mt-8 flex flex-col lg:flex-row">
+<div class="container mx-auto mt-8 flex flex-col lg:flex-row">
 
-        <!-- Parte 1: Título e Frase -->
-        <div class="lg:w-1/2 p-8" style="background-color: white;">
-            <h1 class="text-4xl font-bold mb-4">Bem-vindo ao site Tralhadores da Última Hora!</h1>
-            <p class="text-gray-700">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo"</p>
-        </div>
-<!-- Parte 2: Vídeo responsivo com capa -->
-        <div class="lg:w-1/2 lg:h-50 relative">
-            <div class="w-full h-full overflow-hidden">
-                <video class="w-full h-full object-cover" controls poster="IMG-01.png">
-                    <!-- Adicione o caminho do vídeo local ou URL do vídeo aqui -->
-                    <source src="Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4" style="border-radius: 30px;">
-                    Seu navegador não suporta o elemento de vídeo.
-                </video>
+   <!-- Parte 1: Título e Frase -->
+<div class="lg:w-1/2 p-8 mb-4 rounded-xl overflow-hidden">
+    <div class="bg-gray-300 p-8">
+        <h1 class="text-4xl font-bold mb-2">Bem-vindo ao site Trabalhadores da Última Hora!</h1>
+        <p class="text-gray-700 font-sans font-bold italic">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo - Allan Kardec"</p>
+    </div>
+</div>
+
+
+
+
+    <!-- Parte 2: Vídeo responsivo com capa -->
+    <div class="lg:w-1/2 relative">
+        <div class="w-full h-full overflow-hidden">
+            <div class="video-container">
+                <button id="playButton" class="play-button"><span>Clique no Vídeo ▶</span></button>
             </div>
         </div>
-
     </div>
+
+    <!-- Modal para o vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video class="w-full h-full" controls poster="" id="modalVideoPlayer">
+                <!-- Adicione o caminho do vídeo local ou URL do vídeo aqui -->
+                <source src="Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+
+</div>
+
 
     <!-- Seção de Cards Responsivos -->
     <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
-        <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-2">Card 1</h2>
             <img src="https://picsum.photos/400/300/?image=101" alt="Placeholder 1" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 1...</p>
         </div>
         <!-- Card 2 -->
-        <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-2">Card 2</h2>
             <img src="https://picsum.photos/400/300/?image=102" alt="Placeholder 2" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 2...</p>
         </div>
         <!-- Card 3 -->
-        <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-2">Card 3</h2>
             <img src="https://picsum.photos/400/300/?image=103" alt="Placeholder 3" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 3...</p>
@@ -102,13 +124,42 @@
             <div><img src="https://picsum.photos/800/600/?image=3" alt="Imagem 3"></div>
         </div>
     </div>
-   
+
+ <!-- Seção do Contador -->
+ <div class="counter-section">
+    <div class="counter-item" id="hoursCounter">
+        <h1>Horas de Colaboração</h1>
+        <span class="counter-value">100</span>
+    </div>
+    <div class="counter-item" id="foodCounter">
+        <h1>Comidas Distribuídas</h1>
+        <span class="counter-value">500</span>
+    </div>
+    <div class="counter-item" id="peopleCounter">
+        <h1>Pessoas Atendidas</h1>
+        <span class="counter-value">1000</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <!-- Rodapé -->
-    <footer class="bg-seagull-400 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+<footer class="bg-seagull-400 text-white p-4 mt-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Trabalhadores da Última Hora. Todos os direitos reservados.</p>
+        
+        <!-- Adicione a div para a logomarca -->
+        <div class="mt-4">
+            <img src="IMG-02.jpeg" alt="Logomarca" class="w-auto h-16 mx-auto">
         </div>
-    </footer>
+    </div>
+</footer>
+
 
     <!-- Scripts para a funcionalidade do menu hamburguer e do carrossel -->
     <script>
@@ -120,7 +171,7 @@
         });
 
         // Inicialização do carrossel usando Owl Carousel
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 // Configurações do carrossel (você pode ajustar conforme necessário)
                 autoplay: true,
@@ -129,14 +180,95 @@
                 center: true,
                 loop: true,
                 margin: 10,
-                responsive:{
-                    600:{
+                responsive: {
+                    600: {
                         items: 1
                     }
                 }
             });
         });
-    </script>
 
+        // Adicionando funcionalidade ao botão de play
+        const playButton = document.getElementById('playButton');
+        const videoModal = document.getElementById('videoModal');
+        const modalVideoPlayer = document.getElementById('modalVideoPlayer');
+
+        playButton.addEventListener('click', () => {
+            videoModal.style.display = 'block';
+            modalVideoPlayer.play();
+        });
+
+        function closeModal() {
+            videoModal.style.display = 'none';
+            modalVideoPlayer.pause();
+        }
+
+        // Fechar modal ao clicar fora do vídeo
+        window.addEventListener('click', (event) => {
+            if (event.target === videoModal) {
+                closeModal();
+            }
+        });
+    </script>
+    <!-- Script do Contador -->
+    
+    
+
+
+
+    
+    <!-- Fim do Script do Contador -->
+
+    <script>
+        // Adicione isso ao seu script JavaScript
+$(document).ready(function () {
+    // Inicialização do carrossel usando Owl Carousel
+    $('.video-carousel').owlCarousel({
+        items: 3, // Altere conforme necessário para o número desejado de vídeos visíveis ao mesmo tempo
+        loop: true,
+        margin: 15,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+    // Adicionando funcionalidade ao botão de play
+    $('.play-button').click(function () {
+        const videoId = $(this).data('video');
+        const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        $('#videoModal iframe').attr('src', videoUrl);
+        $('#videoModal').css('display', 'block');
+    });
+
+    // Fechar modal ao clicar fora do vídeo
+    $(window).click(function (event) {
+        const videoModal = $('#videoModal');
+        if (event.target === videoModal[0]) {
+            closeModal();
+        }
+    });
+
+    // Fechar modal ao clicar no botão de fechar
+    $('.close').click(function () {
+        closeModal();
+    });
+});
+
+function closeModal() {
+    $('#videoModal iframe').attr('src', '');
+    $('#videoModal').css('display', 'none');
+}
+
+    </script>
 </body>
+
 </html>
