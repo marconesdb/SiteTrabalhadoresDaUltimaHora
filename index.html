@@ -13,6 +13,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="tailwind.css">
     <script src="tailwind.config.js"></script>
+    
+    <!-- CSS do Video Play -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <title>Meu Site</title>
 </head>
@@ -50,17 +53,16 @@
     <div class="container mx-auto mt-8 flex flex-col lg:flex-row">
 
         <!-- Parte 1: Título e Frase -->
-        <div class="lg:w-1/2 p-8">
-            <h1 class="text-4xl font-bold mb-4">Bem-vindo ao Meu Site</h1>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec augue nec leo hendrerit volutpat.</p>
+        <div class="lg:w-1/2 p-8" style="background-color: white;">
+            <h1 class="text-4xl font-bold mb-4">Bem-vindo ao site Tralhadores da Última Hora!</h1>
+            <p class="text-gray-700">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo"</p>
         </div>
-
-        Parte 2: Vídeo responsivo com capa
+<!-- Parte 2: Vídeo responsivo com capa -->
         <div class="lg:w-1/2 lg:h-50 relative">
             <div class="w-full h-full overflow-hidden">
                 <video class="w-full h-full object-cover" controls poster="IMG-01.png">
                     <!-- Adicione o caminho do vídeo local ou URL do vídeo aqui -->
-                    <source src="Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4" >
+                    <source src="Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4" style="border-radius: 30px;">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
             </div>
