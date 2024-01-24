@@ -5,7 +5,7 @@ body {
     flex-direction: column;
 }
 
-main {
+section {
     flex: 1;
 }
 
@@ -13,11 +13,7 @@ main {
     flex: 1; /* Faz com que o conteúdo preencha o espaço disponível */
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 
 /* Galeria Imagens */
 @media (min-width: 1024px) {
@@ -46,22 +42,19 @@ footer {
     max-height: 100%;
 }
 
+
 /* Novo estilo para o rodapé */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    margin-top: 100px; /* Ajuste conforme necessário para evitar sobreposição */
 }
 
- /* Estilo para fixar o rodapé na versão desktop */
- @media (min-width: 1024px) {
+@media (max-width: 767px) {
     footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+      display: block !important; /* Certifique-se de que o rodapé seja exibido */
     }
-}
-
+  }
+  
 /* Adicionei uma classe específica para o container da galeria */
 .galeria-container {
     margin-bottom: 250px; /* Adapte este valor conforme necessário */
@@ -70,7 +63,7 @@ footer {
 /* Estilos para a div principal */
 /* Adicione estilos para a yellow-container */
 .yellow-container {
-    background-color: rgb(225, 65, 7);
+    
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -97,4 +90,8 @@ footer {
 
 .content-container {
     margin-bottom: 4rem; /* Ajuste conforme necessário */
+}
+
+.galeria-container {
+    margin-bottom: 4rem; /* Ajuste o valor conforme necessário */
 }

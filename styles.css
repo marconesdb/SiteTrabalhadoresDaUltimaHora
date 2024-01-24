@@ -144,7 +144,7 @@
 
 /* Estilos para a div principal */
 .orange-container {
-    background-color: orange;
+    background-color: gainsboro;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -153,15 +153,15 @@
 
 /* Estilos para o texto à esquerda */
 .left-text {
-    color: white;
+    color: black;
     font-size: 18px;
     font-weight: bold;
 }
 
 /* Estilos para o botão à direita */
 .right-button {
-    background-color: white;
-    color: orange;
+    background-color: black;
+    color: yellow;
     border: 2px solid orange;
     padding: 10px 20px;
     font-size: 16px;
@@ -195,4 +195,14 @@
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.text-doacao{
+    color: black;
+    
+}
+
+.bg-button{
+    background-color: aqua;
+    color: orangered;
 }

@@ -107,72 +107,44 @@
 </div>
 
 
-    <!-- Seção do Contador Personalizado -->
-    <div class="counter-section bg-seagull-400 container mx-auto mt-8 ">
-        <!-- Contador de Horas -->
-        <div class="counter-item">
-            <i class="counter-icon fas fa-clock"></i>
-            <h1>Horas de Colaboração</h1>
-            <span class="counter-value">100</span>
+<!-- Seção de Contadores -->
+<section class="container mx-auto mt-8 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <!-- Contador de Marmitas Distribuídas -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md flex items-center">
+            <div class="mr-4 ">
+                <i class="fas fa-utensils text-3xl text-gray-500"></i>
+            </div>
+            <div >
+                <h3 class="text-xl font-bold">Marmitas Distribuídas</h3>
+                <p class="text-gray-600">+ de 500</p>
+            </div>
         </div>
 
-        <!-- Contador de Comidas Distribuídas -->
-        <div class="counter-item">
-            <i class="counter-icon fas fa-utensils"></i>
-            <h1>Comidas Distribuídas</h1>
-            <span class="counter-value">500</span>
+        <!-- Contador de Horas de Colaboração -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md flex items-center">
+            <div class="mr-4">
+                <i class="far fa-clock text-3xl text-gray-500"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Horas de Colaboração</h3>
+                <p class="text-gray-600">+ de 1000</p>
+            </div>
         </div>
 
         <!-- Contador de Pessoas Atendidas -->
-        <div class="counter-item">
-            <i class="counter-icon fas fa-users"></i>
-            <h1>Pessoas Atendidas</h1>
-            <span class="counter-value">1000</span>
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md flex items-center">
+            <div class="mr-4">
+                <i class="fas fa-users text-3xl text-gray-500"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Pessoas Atendidas</h3>
+                <p class="text-gray-600">+ de 800</p>
+            </div>
         </div>
     </div>
+</section>
 
-<!-- ... (seu código anterior) ... -->
-
-<!-- Link para a biblioteca Waypoints - Contador -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-<!-- Script do Contador -->
-<script>
-    $(document).ready(function () {
-        $('.counter-value').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-
-            $this.waypoint({
-                handler: function () {
-                    $({ countNum: $this.text() }).animate({
-                        countNum: countTo
-                    },
-                        {
-                            duration: 2000,
-                            easing: 'linear',
-                            step: function () {
-                                $this.text(Math.floor(this.countNum));
-                            },
-                            complete: function () {
-                                $this.text(this.countNum);
-                            }
-                        });
-
-                    this.destroy(); // Destruir o handler após a animação para evitar a repetição
-                },
-                offset: '90%' // Ajuste conforme necessário para determinar quando a animação deve começar
-            });
-        });
-    });
-</script>
-<!-- Fim do Script do Contador -->
-
-<!-- ... (seu código posterior) ... -->
-
-
-
-<!-- Fim do contador -->
 
 
     <!-- Seção de Cards Responsivos -->
@@ -197,11 +169,11 @@
         </div>
     </div>
 <!-- Div principal com fundo azul, texto à esquerda e botão à direita -->
-<div class="blue-container container mx-auto mt-8 bg-seagull-400">
-    <div class="left-text-blue bg-seagull-400">
-        Faça uma doação. Ajude a manter este projeto de amparo!
+<div class="blue-container container mx-auto mt-8 bg-gray-300">
+    <div class="left-text-blue">
+        <p class="text-doacao">Faça uma doação. Ajude a manter este projeto de amparo!</p>
         </div>
-    <button class="right-button-blue">Quero Doar!</button>
+    <button class="right-button-blue bg-button"><a href="contato.html">Quero Doar!</a></button>
 </div>
     <!-- Carrossel usando Owl Carousel -->
     <div class="container mx-auto mt-8 relative z-10">
@@ -248,7 +220,7 @@
         <div class="left-text">
             Seja um voluntário e venha fazer a diferença na vida de muitos!
             </div>
-        <button class="right-button">Entre em Contato!</button>
+        <button class="right-button"><a href="contato.html">Entre em Contato!</a></button>
     </div>
 
 
@@ -334,14 +306,7 @@
             }
         });
     </script>
-    <!-- Script do Contador -->
     
-    
-
-
-
-    
-    <!-- Fim do Script do Contador -->
 
     <script>
         // Adicione isso ao seu script JavaScript
