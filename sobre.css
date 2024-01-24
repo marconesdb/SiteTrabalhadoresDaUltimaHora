@@ -1,0 +1,68 @@
+body {
+    min-height: 100vh; /* Faz com que o corpo da página ocupe pelo menos a altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.content {
+    flex: 1; /* Faz com que o conteúdo preencha o espaço disponível */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Galeria Imagens */
+@media (min-width: 1024px) {
+    .gallery-container {
+        justify-content: center;
+    }
+}
+
+/* Fim */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Novo estilo para o rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ /* Estilo para fixar o rodapé na versão desktop */
+ @media (min-width: 1024px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Adicionei uma classe específica para o container da galeria */
+.galeria-container {
+    margin-bottom: 250px; /* Adapte este valor conforme necessário */
+}

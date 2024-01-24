@@ -1,3 +1,4 @@
+ 
  /* Estilos adicionados para o modal */
  .modal {
     display: none;
@@ -76,3 +77,26 @@
     transform: translateY(0);
 }
 
+/* Estilo para o traço hover nas listas */
+
+  /* Estilo padrão para o traço nas listas */
+  .nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: orangered; /* Cor do traço */
+    transition: width 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o traço no hover e foco nas listas */
+.nav-link:hover::after, .nav-link:focus::after {
+    width: 100%;
+}
+
+/* Responsividade para telas menores que 768 pixels (pode ajustar conforme necessário) */
+@media (max-width: 768px) {
+    .nav-link::after {
+        display: none; /* Oculta o traço em telas menores */
+    }
+}

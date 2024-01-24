@@ -1,60 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Meu Site</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
 
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="sobre.css">
+    <!-- Link Fonte Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <!-- Adicione o link para a biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <title>Sobre Nós</title>
+
+    
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    
+    
     <!-- Navbar -->
-    <nav class="bg-blue-500 p-4">
+    <nav class="bg-seagull-400 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white font-bold text-lg">
-                <a href="index.html">Logo</a>
+                <a href="index.html">
+                    <img src="IMG-02.jpeg" alt="" class="w-auto h-20">
+                </a>
             </div>
             <div class="lg:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
             <div class="hidden lg:flex space-x-4">
-                <a href="index.html" class="text-white">Home</a>
-                <a href="sobre.html" class="text-white">Sobre</a>
-                <a href="contato.html" class="text-white">Contato</a>
+                <a href="index.html" class="text-white nav-link font-sans font-bold">Home</a>
+                <a href="sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
+                <a href="contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
             </div>
         </div>
     </nav>
 
     <!-- Conteúdo principal -->
-    <div class="container mx-auto mt-8">
-        <h1 class="text-4xl font-bold mb-4">Sobre Nós</h1>
-        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec augue nec leo hendrerit volutpat.</p>
+    <main class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-md galeria-container">
+        <h1 class="text-4xl font-bold mb-4">Quem Somos</h1>
+        <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat eu ex feugiat, at rhoncus justo fermentum. In hac habitasse platea dictumst. Nullam non facilisis quam. Sed laoreet bibendum leo, vel suscipit orci tempus vitae.</p>
+        <p class="text-gray-700">Curabitur blandit ante ac dapibus eleifend. Curabitur scelerisque aliquam leo, sit amet aliquet elit mollis vel. In hac habitasse platea dictumst. Quisque vehicula aliquet tellus ut accumsan. Integer auctor vestibulum ligula, eu consequat odio ultrices in.</p>
+    </main>
 
-        <!-- Mais conteúdo da página Sobre pode ser adicionado aqui -->
+    <!-- Galeria de Imagens e Vídeos -->
+    <div class="container mx-auto p-8 bg-white rounded-lg shadow-md galeria-container">
+        <h2 class="text-2xl font-bold mb-4 text-center">Nossos Momentos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Adicione suas imagens aqui -->
+            <a data-fancybox="gallery" href="IMG-01.png" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Imagem 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem2.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem2.jpg" alt="Imagem 2" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem3.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem3.jpg" alt="Imagem 3" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem4.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem4.jpg" alt="Imagem 4" class="w-full h-auto rounded-md">
+            </a>
+            <!-- Adicione seus vídeos aqui -->
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <!-- Adicione suas imagens aqui -->
+            <a data-fancybox="gallery" href="IMG-01.png" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Imagem 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem2.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem2.jpg" alt="Imagem 2" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem3.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem3.jpg" alt="Imagem 3" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="imagem4.jpg" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="imagem4.jpg" alt="Imagem 4" class="w-full h-auto rounded-md">
+            </a>
+            <!-- Adicione seus vídeos aqui -->
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <a data-fancybox="gallery" href="https://www.youtube.com/embed/your-video-id" data-type="iframe" class="w-full h-auto rounded-md cursor-pointer fancybox">
+                <img src="IMG-01.png" alt="Vídeo 1" class="w-full h-auto rounded-md">
+            </a>
+            <!-- Adicione mais imagens e vídeos conforme necessário -->
+        </div>
     </div>
 
+    
     <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+<footer class="bg-seagull-400 text-white p-4 mt-8 font-sans font-bold">
+    <div class="container mx-auto text-center">
+        <!-- Adicione os ícones das redes sociais aqui -->
+        <div class="flex space-x-4">
+            <a href="#" class="text-white">
+                <i class="fab fa-facebook-square text-2xl"></i>
+            </a>
+            <a href="#" class="text-white">
+                <i class="fab fa-instagram-square text-2xl"></i>
+            </a>
+            <a href="#" class="text-white">
+                <i class="fab fa-whatsapp-square text-2xl"></i>
+            </a>
         </div>
-    </footer>
 
-    <!-- Scripts para a funcionalidade do menu hamburguer -->
+        <p>&copy; 2024 Trabalhadores da Última Hora. Todos os direitos reservados.</p>
+
+        <!-- Adicione a div para a logomarca -->
+        <div class="mt-4">
+            <img src="IMG-02.jpeg" alt="Logomarca" class="w-auto h-16 mx-auto">
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuItems = document.querySelector('.lg\\:flex');
+        $(document).ready(function () {
+            const menuToggle = $('#menu-toggle');
+            const menuItems = $('.lg\\:flex');
 
-        menuToggle.addEventListener('click', () => {
-            menuItems.classList.toggle('hidden');
+            menuToggle.on('click', function () {
+                menuItems.toggleClass('hidden');
+            });
+
+            // Inicializa o plugin Fancybox
+            $('[data-fancybox]').fancybox({
+                loop: true
+            });
         });
     </script>
-
 </body>
+
 </html>
