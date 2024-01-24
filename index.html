@@ -30,15 +30,18 @@
     <!-- Link para a biblioteca Waypoints - Contador -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
+    
+
     <title>Meu Site</title>
 </head>
 
 <body  class="bg-gray-100 font-sans">
 
     
-     <!-- Navbar -->
-<nav class="bg-seagull-400 fixed top-0 w-full">
-    <div class="container mx-auto flex justify-between items-center">
+<!-- Navbar -->
+<nav class="bg-seagull-400 fixed top-0 w-full z-20">
+    
+    <div class="container mx-auto flex justify-between items-center px-4">
         <!-- Logo -->
         <div class="text-white font-bold text-lg">
             <a href="index.html">
@@ -63,6 +66,7 @@
         </div>
     </div>
 </nav>
+
 
 
     <!-- Conteúdo principal -->
@@ -104,7 +108,7 @@
 
 
     <!-- Seção do Contador Personalizado -->
-    <div class="counter-section container mx-auto mt-8 ">
+    <div class="counter-section bg-seagull-400 container mx-auto mt-8 ">
         <!-- Contador de Horas -->
         <div class="counter-item">
             <i class="counter-icon fas fa-clock"></i>
@@ -127,6 +131,48 @@
         </div>
     </div>
 
+<!-- ... (seu código anterior) ... -->
+
+<!-- Link para a biblioteca Waypoints - Contador -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<!-- Script do Contador -->
+<script>
+    $(document).ready(function () {
+        $('.counter-value').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+
+            $this.waypoint({
+                handler: function () {
+                    $({ countNum: $this.text() }).animate({
+                        countNum: countTo
+                    },
+                        {
+                            duration: 2000,
+                            easing: 'linear',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+
+                    this.destroy(); // Destruir o handler após a animação para evitar a repetição
+                },
+                offset: '90%' // Ajuste conforme necessário para determinar quando a animação deve começar
+            });
+        });
+    });
+</script>
+<!-- Fim do Script do Contador -->
+
+<!-- ... (seu código posterior) ... -->
+
+
+
+<!-- Fim do contador -->
 
 
     <!-- Seção de Cards Responsivos -->
@@ -152,13 +198,13 @@
     </div>
 <!-- Div principal com fundo azul, texto à esquerda e botão à direita -->
 <div class="blue-container container mx-auto mt-8 bg-seagull-400">
-    <div class="left-text-blue">
+    <div class="left-text-blue bg-seagull-400">
         Faça uma doação. Ajude a manter este projeto de amparo!
         </div>
     <button class="right-button-blue">Quero Doar!</button>
 </div>
     <!-- Carrossel usando Owl Carousel -->
-    <div class="container mx-auto mt-8">
+    <div class="container mx-auto mt-8 relative z-10">
         <div class="owl-carousel owl-theme">
             <!-- Placeholder do banner -->
             <div><img src="./img/Captura de Tela (4138).png" alt="Banner"></div>

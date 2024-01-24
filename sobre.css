@@ -94,3 +94,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+.content-container {
+    margin-bottom: 4rem; /* Ajuste conforme necessário */
+}
