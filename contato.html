@@ -14,13 +14,15 @@
 <body class="bg-gray-100 font-sans flex flex-col min-h-screen">
 
     <!-- Navbar -->
-    <nav class="bg-seagull-400 p-4">
+    <nav class="bg-seagull-400 fixed top-0 w-full">
         <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
             <div class="text-white font-bold text-lg">
                 <a href="index.html">
                     <img src="IMG-02.jpeg" alt="" class="w-auto h-20">
                 </a>
             </div>
+            <!-- Ícone do menu para dispositivos móveis -->
             <div class="lg:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -30,7 +32,8 @@
                     </svg>
                 </button>
             </div>
-            <div class="hidden lg:flex space-x-4">
+            <!-- Links de navegação para dispositivos maiores -->
+            <div class="hidden lg:flex space-x-4 ">
                 <a href="index.html" class="text-white nav-link font-sans font-bold">Início</a>
                 <a href="sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
                 <a href="contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
@@ -39,7 +42,7 @@
     </nav>
 
     <!-- Conteúdo principal -->
-    <div class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-md flex-grow">
+    <div class="container mx-auto mt-28 p-8 bg-white rounded-lg shadow-md flex-grow">
         <!-- Título -->
         <h2 class="text-2xl font-bold mb-4 text-center">Entre em Contato:</h2>
 

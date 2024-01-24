@@ -66,3 +66,31 @@ footer {
 .galeria-container {
     margin-bottom: 250px; /* Adapte este valor conforme necessário */
 }
+
+/* Estilos para a div principal */
+/* Adicione estilos para a yellow-container */
+.yellow-container {
+    background-color: rgb(225, 65, 7);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Adicione esta margem para separar da galeria */
+    margin-bottom: 20px; /* Adicione esta margem para separar do conteúdo abaixo */
+}
+
+.yellow-container .left-text-yellow {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.yellow-container .right-button-yellow {
+    background-color: black;
+    color: yellow;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}

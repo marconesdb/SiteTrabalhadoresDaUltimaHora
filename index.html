@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="tailwind.css">
     <script src="tailwind.config.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <!-- CSS do Video Play -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <!-- Link Fonte Nunito Sans -->
@@ -22,6 +24,9 @@
     <!-- Adicione o link para a biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
+   
+    <!-- Link para FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Link para FontAwesome -->
     <!-- Link para a biblioteca Waypoints - Contador -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
@@ -30,35 +35,38 @@
 
 <body  class="bg-gray-100 font-sans">
 
-    <!-- Navbar -->
-    <nav class="bg-seagull-400 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="text-white font-bold text-lg">
-                <a href="index.html">
-                    <img src="IMG-02.jpeg" alt="" class="w-auto h-20">
-                </a>
-            </div>
-            <!-- Ícone do menu para dispositivos móveis -->
-            <div class="lg:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Links de navegação para dispositivos maiores -->
-            <div class="hidden lg:flex space-x-4">
-                <a href="index.html" class="text-white nav-link font-sans font-bold">Início</a>
-                <a href="sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
-                <a href="contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
-            </div>
-            
+    
+     <!-- Navbar -->
+<nav class="bg-seagull-400 fixed top-0 w-full">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-white font-bold text-lg">
+            <a href="index.html">
+                <img src="IMG-02.jpeg" alt="" class="w-auto h-20">
+            </a>
         </div>
-    </nav>
+        <!-- Ícone do menu para dispositivos móveis -->
+        <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Links de navegação para dispositivos maiores -->
+        <div class="hidden lg:flex space-x-4">
+            <a href="index.html" class="text-white nav-link font-sans font-bold">Início</a>
+            <a href="sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
+            <a href="contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
+        </div>
+    </div>
+</nav>
+
 
     <!-- Conteúdo principal -->
-<div class="container mx-auto mt-8 flex flex-col lg:flex-row">
+<div class="container mx-auto mt-28 flex flex-col lg:flex-row">
 
    <!-- Parte 1: Título e Frase -->
 <div class="lg:w-1/2 p-8 mb-4 rounded-xl overflow-hidden">
@@ -95,6 +103,32 @@
 </div>
 
 
+    <!-- Seção do Contador Personalizado -->
+    <div class="counter-section container mx-auto mt-8 ">
+        <!-- Contador de Horas -->
+        <div class="counter-item">
+            <i class="counter-icon fas fa-clock"></i>
+            <h1>Horas de Colaboração</h1>
+            <span class="counter-value">100</span>
+        </div>
+
+        <!-- Contador de Comidas Distribuídas -->
+        <div class="counter-item">
+            <i class="counter-icon fas fa-utensils"></i>
+            <h1>Comidas Distribuídas</h1>
+            <span class="counter-value">500</span>
+        </div>
+
+        <!-- Contador de Pessoas Atendidas -->
+        <div class="counter-item">
+            <i class="counter-icon fas fa-users"></i>
+            <h1>Pessoas Atendidas</h1>
+            <span class="counter-value">1000</span>
+        </div>
+    </div>
+
+
+
     <!-- Seção de Cards Responsivos -->
     <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
@@ -116,33 +150,60 @@
             <p class="text-gray-700">Conteúdo do Card 3...</p>
         </div>
     </div>
-
+<!-- Div principal com fundo azul, texto à esquerda e botão à direita -->
+<div class="blue-container container mx-auto mt-8 bg-seagull-400">
+    <div class="left-text-blue">
+        Faça uma doação. Ajude a manter este projeto de amparo!
+        </div>
+    <button class="right-button-blue">Quero Doar!</button>
+</div>
     <!-- Carrossel usando Owl Carousel -->
     <div class="container mx-auto mt-8">
         <div class="owl-carousel owl-theme">
             <!-- Placeholder do banner -->
-            <div><img src="https://picsum.photos/800/600/?image=4" alt="Banner"></div>
-            <div><img src="https://picsum.photos/800/600/?image=1" alt="Imagem 1"></div>
-            <div><img src="https://picsum.photos/800/600/?image=2" alt="Imagem 2"></div>
-            <div><img src="https://picsum.photos/800/600/?image=3" alt="Imagem 3"></div>
+            <div><img src="./img/Captura de Tela (4138).png" alt="Banner"></div>
+            <div><img src="./img/Captura de Tela (4150).png" alt="Imagem 1"></div>
+            <div><img src="./img/Captura de Tela (4175).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4196).png" alt="Imagem 3"></div>
+            <div><img src="./img/Captura de Tela (4139).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4164).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4181).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4148).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4157).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4162).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <!--  -->
+            <div><img src="./img/Captura de Tela (4151).png" alt="Banner"></div>
+            <div><img src="./img/Captura de Tela (4153).png" alt="Imagem 1"></div>
+            <div><img src="./img/Captura de Tela (4195).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4145).png" alt="Imagem 3"></div>
+            <div><img src="./img/Captura de Tela (4176).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4141).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4142).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4146).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4144).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4177).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <!--  -->
+            <div><img src="img/Captura de Tela (4179).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4182).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4190).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4159).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4158).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4156).png" alt="Imagem 3"></div>
         </div>
     </div>
 
- <!-- Seção do Contador -->
- <div class="counter-section">
-    <div class="counter-item" id="hoursCounter">
-        <h1>Horas de Colaboração</h1>
-        <span class="counter-value">100</span>
+ 
+     <!-- Div principal com fundo laranja, texto à esquerda e botão à direita -->
+     <div class="orange-container container mx-auto mt-8">
+        <div class="left-text">
+            Seja um voluntário e venha fazer a diferença na vida de muitos!
+            </div>
+        <button class="right-button">Entre em Contato!</button>
     </div>
-    <div class="counter-item" id="foodCounter">
-        <h1>Comidas Distribuídas</h1>
-        <span class="counter-value">500</span>
-    </div>
-    <div class="counter-item" id="peopleCounter">
-        <h1>Pessoas Atendidas</h1>
-        <span class="counter-value">1000</span>
-    </div>
-</div>
 
 
 

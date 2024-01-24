@@ -1,4 +1,22 @@
- 
+
+
+/* Estilo da Seção do Contador Personalizado */
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+/* Estilo do Item do Contador */
+.counter-item {
+    text-align: center;
+}
+
+/* Estilo dos Ícones */
+.counter-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
  /* Estilos adicionados para o modal */
  .modal {
     display: none;
@@ -99,4 +117,83 @@
     .nav-link::after {
         display: none; /* Oculta o traço em telas menores */
     }
+}
+
+/* Estilo da Seção do Contador Personalizado */
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+  
+}
+
+/* Estilo do Item do Contador */
+.counter-item {
+    text-align: center;
+    color: white;
+    
+}
+
+/* Estilo dos Ícones */
+.counter-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+/* Estilos para a div principal */
+.orange-container {
+    background-color: orange;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o texto à esquerda */
+.left-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para o botão à direita */
+.right-button {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+ /* Estilos para a div principal */
+ .blue-container {
+    background-color: dodgerblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o texto à esquerda */
+.left-text-blue {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para o botão à direita */
+.right-button-blue {
+    background-color: white;
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
