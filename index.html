@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="tailwind.css">
     <script src="tailwind.config.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- CSS do Video Play -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -70,28 +69,51 @@
 
 
     <!-- Conteúdo principal -->
-<div class="container mx-auto mt-28 flex flex-col lg:flex-row">
+<div class="container mx-auto mt-28 flex flex-col lg:flex-row ">
 
    <!-- Parte 1: Título e Frase -->
 <div class="lg:w-1/2 p-8 mb-4 rounded-xl overflow-hidden">
     <div class="bg-gray-300 p-8">
         <h1 class="text-4xl font-bold mb-2">Bem-vindo ao site Trabalhadores da Última Hora!</h1>
+        
         <p class="text-gray-700 font-sans font-bold italic">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo - Allan Kardec"</p>
+        
+    </div>
+     
+</div>
+
+
+
+
+    
+
+<!-- Parte 2: Vídeo e Imagem -->
+<div class="lg:w-1/2 relative flex justify-center items-center">
+    <div class="w-full h-full overflow-hidden relative">
+        <div class="video-container relative">
+            <img src="./img/Logomarca.png" alt="" class="mx-auto" style="width: 100%; max-width: 270px;">
+            <!-- Botão de reprodução -->
+            <button id="playButton" class="play-button absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-6"><span>▶</span></button>
+        </div>
     </div>
 </div>
 
 
 
 
-    <!-- Parte 2: Vídeo responsivo com capa -->
-    <div class="lg:w-1/2 relative">
-        <div class="w-full h-full overflow-hidden">
-            <div class="video-container">
-                <button id="playButton" class="play-button"><span>Clique no Vídeo ▶</span></button>
-            </div>
-        </div>
-    </div>
 
+
+
+
+
+
+
+
+
+
+
+    
+      
     <!-- Modal para o vídeo -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
@@ -151,19 +173,19 @@
     <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Card 1</h2>
+            <h2 class="text-xl font-bold mb-2">Colabore</h2>
             <img src="img/419690171.jpg" alt="Placeholder 1" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 1...</p>
         </div>
         <!-- Card 2 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Card 2</h2>
+            <h2 class="text-xl font-bold mb-2">Kombi</h2>
             <img src="img/370357835.jpg" alt="Placeholder 2" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 2...</p>
         </div>
         <!-- Card 3 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Card 3</h2>
+            <h2 class="text-xl font-bold mb-2">Instituição</h2>
             <img src="img/Captura de Tela (4159).png" alt="Placeholder 3" class="mb-4 rounded-lg">
             <p class="text-gray-700">Conteúdo do Card 3...</p>
         </div>
